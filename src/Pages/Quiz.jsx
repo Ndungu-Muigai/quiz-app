@@ -42,7 +42,7 @@ const Quiz = ({questions, time_limit, userAnswers, setUserAnswers}) =>
                 if(previous === 0)
                 {
                     clearInterval(quizTimer) //Clear the interval
-                    navigate("/results") //Navigate to the results page
+                    navigate("/quiz/results") //Navigate to the results page
                     return 0
                 }
                 else

@@ -7,10 +7,16 @@ const Results = ({ questions, userAnswers}) =>
     const navigate = useNavigate()
 
     // Calculate the total score
-    const score = questions.reduce((total, question, index) => 
+    let score = 0
+
+    //Mapping through the questions array to see if the answer given matches the correct answer
+    questions.forEach((question, index) => 
     {
-        return total + (userAnswers[index] === question.correct_answer ? 1 : 0)
-    }, 0)
+        if(userAnswers[index] === question.correct_answer)
+        {
+            score++ //Increment answer if correct
+        }
+    })
 
     return (
         <div className="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-lg">

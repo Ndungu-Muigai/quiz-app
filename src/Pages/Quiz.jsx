@@ -55,7 +55,7 @@ const Quiz = ({questions, time_limit, userAnswers, setUserAnswers}) =>
         //Clearnup function for the quiz timer
         return ()=> clearInterval(quizTimer)
 
-    },[navigate])
+    },[navigate, setUserAnswers])
 
     //Function to format the time remaining as MM:SS
     const formatTime = time => 

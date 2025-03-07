@@ -74,7 +74,7 @@ const Generate = ({setQuestions, time_limit, setTimeLimit}) =>
 
     return (
         <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6">
-            <h1 className="text-3xl font-bold text-center text-primary">Welcome to Quizify</h1>
+            <h1 className="text-3xl font-bold text-center text-primary">Welcome to Quiz Byte</h1>
             <p className="text-center text-gray-600 mt-2">Test your knowledge and have fun!</p>
 
             <form onSubmit={getQuestions} className="mt-6">

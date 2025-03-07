@@ -14,8 +14,6 @@ const Results = ({ questions, userAnswers}) =>
     {
         if(userAnswers[index] === question.correct_answer)
         {
-            console.log(question.index)
-            console.log(userAnswers[index])
             score++ //Increment answer if correct
         }
     })

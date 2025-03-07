@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 
@@ -8,11 +9,15 @@ const QuizLanding = ({questions, time_limit}) =>
     // Check if questions are available and redirect if none are available
     useEffect(() => 
     {
-        if (!questions) 
-        {
-            navigate("/"); 
-        }
-    }, [questions, navigate]);
+        !questions || questions.length === 0 
+        ?
+            toast.error("Kindly generate questions to get started",
+            {
+                onClose: ()=> navigate("/")
+            })
+        :
+            null
+    }, [navigate, questions]);
 
     // useEffect(() => 
     // {
@@ -34,7 +39,7 @@ const QuizLanding = ({questions, time_limit}) =>
                 <h1 className="text-3xl font-bold text-primary">Quiz Starts Soon!</h1>
                 <p className="text-md mt-4">Your questions have been set. Click the "Start Quiz" button to get started</p>
                 <p className="text-md mt-2">You have <span className="font-semibold">{time_limit} minutes</span> to complete the quiz. All the best!</p>
-                <button className="btn btn-primary px-6 py-2 text-white rounded-md mt-3">Start Quiz</button>
+                <button onClick={()=> navigate("/quiz/start")} className="btn btn-primary px-6 py-2 text-white rounded-md mt-3">Start Quiz</button>
             </div>
         </div>
     );

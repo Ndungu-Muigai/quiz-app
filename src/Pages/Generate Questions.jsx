@@ -58,7 +58,7 @@ const Generate = ({setQuestions, time_limit, setTimeLimit}) =>
                 }
                 else
                 {
-                    setError("No questions could be generated. Please try changing the filters")
+                    setError("No questions could be generated. Please try again later")
                     setQuestions([])
                 }
                 
@@ -79,7 +79,7 @@ const Generate = ({setQuestions, time_limit, setTimeLimit}) =>
 
             <form onSubmit={getQuestions} className="mt-6">
                 {
-                    error && <p className="text-red-600 text-center mt-4">{error}</p>
+                    error && <p className="text-red-600 text-center mt-3 mb-5">{error}</p>
                 }
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div className="mb-1">

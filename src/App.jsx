@@ -16,8 +16,6 @@ function App()
   const [time_limit, setTimeLimit] = useState(15)
   const [userAnswers, setUserAnswers] = useState({})
 
-  console.log(questions)
-
   return (
     <div className='text-black min-h-screen bg-gray-100 flex items-center justify-center'>
       <ToastContainer position='top-right' bodyClassName="text-black" autoClose={2500} hideProgressBar={false} newestOnTop={true} closeOnClick rtl={false} pauseOnFocusLoss={false} draggable pauseOnHover={false} theme='light' transition={Slide}/>

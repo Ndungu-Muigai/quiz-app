@@ -121,8 +121,7 @@ const Quiz = ({questions, time_limit, userAnswers, setUserAnswers}) =>
                     {
                         shuffledOptions.map((option, index) => (
                             <label key={index} className="flex items-center gap-3 p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100 peer-checked:bg-blue-100 peer-checked:border-blue-500 transition-all">
-                                <input type="radio" name={`question-${currentQuestionIndex}`} value={option} checked={userAnswers[currentQuestionIndex] === option} onChange={() => handleAnswer(currentQuestionIndex, option)} className="peer hidden"
-                                />
+                                <input type="radio" name={`question-${currentQuestionIndex}`} value={option} checked={userAnswers[currentQuestionIndex] === option} onChange={() => handleAnswer(currentQuestionIndex, option)} className="peer hidden"/>
                                 <div className="w-5 h-5 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:border-green-500 peer-checked:bg-green-500">
                                     <div className="w-2.5 h-2.5 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
                                 </div>

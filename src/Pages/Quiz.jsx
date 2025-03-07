@@ -1,6 +1,6 @@
-import { toast } from "react-toastify";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { toast } from "react-toastify"
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router"
 
 import he from "he"
 
@@ -13,9 +13,9 @@ const Quiz = ({questions, time_limit, userAnswers, setUserAnswers}) =>
     const [timeLeft, setTimeLeft] = useState(time_limit * 60) // Converting the time limit to seconds
 
     // State to track the current question index
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
 
-    const [shuffledOptions, setShuffledOptions] = useState([]);
+    const [shuffledOptions, setShuffledOptions] = useState([])
 
     //Checking if the questions exist
     useEffect(()=>
@@ -146,7 +146,7 @@ const Quiz = ({questions, time_limit, userAnswers, setUserAnswers}) =>
                 
             </div>
         </div>
-     );
+     )
 }
  
-export default Quiz;
+export default Quiz

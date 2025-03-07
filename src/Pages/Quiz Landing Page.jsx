@@ -1,10 +1,10 @@
-import { toast } from "react-toastify";
-import { useEffect } from "react";
-import { useNavigate } from "react-router";
+import { toast } from "react-toastify"
+import { useEffect } from "react"
+import { useNavigate } from "react-router"
 
 const QuizLanding = ({questions, time_limit}) => 
     {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     // Check if questions are available and redirect if none are available
     useEffect(() => 
@@ -17,21 +17,21 @@ const QuizLanding = ({questions, time_limit}) =>
             })
         :
             null
-    }, [navigate, questions]);
+    }, [navigate, questions])
 
     // useEffect(() => 
     // {
         //If the 15 second quiz start count is greater than 0, reduce the count. Redirect to quiz page otherwise
     //     if (countdown > 0) 
     //     {
-    //         const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
-    //         return () => clearTimeout(timer);
+    //         const timer = setTimeout(() => setCountdown(countdown - 1), 1000)
+    //         return () => clearTimeout(timer)
     //     } 
     //     else 
     //     {
     //         navigate("/quiz/start")
     //     }
-    // }, [countdown, navigate, questions, time_limit]);
+    // }, [countdown, navigate, questions, time_limit])
 
     return (
         <div className="flex items-center justify-center h-screen bg-gray-100">
@@ -42,7 +42,7 @@ const QuizLanding = ({questions, time_limit}) =>
                 <button onClick={()=> navigate("/quiz/start")} className="btn btn-primary px-6 py-2 text-white rounded-md mt-3">Start Quiz</button>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default QuizLanding;
+export default QuizLanding
